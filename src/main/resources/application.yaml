@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: climalert
+  profiles:
+    active: local
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${USERNAME:username}
+    password: ${PASSWORD:password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+weather:
+  api:
+    key: ${WEATHER_API_KEY:key}
